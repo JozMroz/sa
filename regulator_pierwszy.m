@@ -1,4 +1,4 @@
-%regulator wyznaczony na zajęciach
+%regulator wyznaczony na zajęciach zielglera-nicholsa 1
 
 
 dane1 = readtable('SCOPE\scope_1 (1)');
@@ -23,3 +23,32 @@ y_norm = (x2 - level_start_x2) / du;
 plot(t, x1_norm, t, y_norm);
 xlim([-6 -2]);
 title('odpowiedź skokowa układu z regulatorem dobranym podczas pomiarów');
+
+%obiekt wyznaczony w pliku obiekt1_offset
+K = 1;
+To = 0.08;
+Tp = 0.37;
+%wyliczenie nastaw początkowych zieglera
+Kp = 1.2*Tp/(K*To);
+Ti = 2*To;
+Td = 0.5*To;
+Ki = Kp/Ti;
+Kd = Kp*Td;
+%wrzucenie teraz tego do simulinka i wyświetlenie wykresu
+
+
+%ustawienie tych wartosci Kp, Ti i Td jako wartosci poczatkowych algorytmu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
