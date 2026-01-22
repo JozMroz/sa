@@ -29,3 +29,13 @@ figure;
 plot(t, x1_norm, t, y_norm);
 disp(['offset = ', num2str(ofset)]);
 title('odpowiedź skokowa do uzyskania parametrów K, To i Tp');
+
+%wyznaczenie K,To i Tp w simulinku
+K = 1;
+To = 0.08;
+Tp = 0.37;
+
+
+
+
+
