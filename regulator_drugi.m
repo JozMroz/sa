@@ -1,4 +1,4 @@
-%dobór regulatora Zieglera 2
+%regulator wyznaczony na zajęciach Zieglera 2
 
 dane1 = readtable('SCOPE\scope_3');
 dane1 = dane1(4:end, :);
@@ -22,3 +22,35 @@ y_norm = (x2 - level_start_x2) / du;
 plot(t, x1_norm, t, y_norm);
 xlim([-4 -1.5]);
 title('odpowiedź skokowa układu z regulatorem dobranym podczas pomiarów');
+
+%wyznaczone parametry obiektu
+K = 1;
+To = 0.08;
+Tp = 0.37;
+%wyznaczenie Ku i Pu i porównanie z wynikami z zajęć
+Ku = 11.5;
+Pu=0.29;
+%liczenie zieglerem
+Kp = 0.6*Ku;
+Ti = 0.5*Pu;
+Td = 0.125*Pu;
+Ki = Kp/Ti;
+Kd = Kp*Td;
+%wrzucic te nastawy jako początkowe do simulinka i porównac z odpowiedzią
+%na zajęciach
+
+
+%stworzyć algorytm w simulinku który będzie dobierał najlepsze
+%nastawy dla tych war pocztkowych
+
+
+
+
+
+
+
+
+
+
+
+
