@@ -29,3 +29,8 @@ plot(t, x1_norm, t, y_norm);
 disp(['offset = ', num2str(ofset)]);
 title('Odpowiedz skokowa do odczytu parametru Ku i Pu');
 xlim([-4.5 -2]);
+
+%wyznaczenie Ku i Pu w simulinku
+Ku = 11.5;
+Pu=0.29;
+
